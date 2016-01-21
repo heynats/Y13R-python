@@ -1,5 +1,6 @@
 import time
 import serial
+import signal
           
 ser = serial.Serial(
           port='/dev/ttyAMA0',
@@ -9,6 +10,7 @@ ser = serial.Serial(
           bytesize=serial.EIGHTBITS,
           timeout=3
           )
+do_test = True
           
 # Terminate test with Ctrl-C
 def end_read(signal,frame):
