@@ -21,6 +21,6 @@ signal.signal(signal.SIGINT, end_read)
 
 while do_test:
   reader_response = ser.readline()
-  if reader_response != ""
+  if reader_response != "":
           hex_msg = " ".join("{:02x}".format(ord(c)) for c in reader_response)
           print hex_msg
